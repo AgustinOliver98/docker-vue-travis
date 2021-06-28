@@ -12,5 +12,4 @@ script:
 deploy:
   provider: heroku
   app: docker-vue-travis
-  api_key:
-    secure: $heroku_api_key
+  api_key: $heroku_api_key
