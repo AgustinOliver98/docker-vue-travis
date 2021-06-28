@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+language: generic
+before_install:
+  - docker build -t agustinoliver/docker-vue-travis -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=TRUE agustinoliver/docker-vue-travis npm run test:unit
